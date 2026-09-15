@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello World：这个博客是怎么搭起来的 · Victor's Blog</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-title" href="../index.html">Victor<span>.</span>Blog</a>
+    <nav class="site-nav">
+      <a href="../about.html">关于</a>
+      <button id="theme-toggle" aria-label="切换主题">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="post">
+    <h1>Hello World：这个博客是怎么搭起来的</h1>
+    <div class="post-meta">2026-09-15 · Victor</div>
+
+    <p>这是这个博客的第一篇文章。整个站点没有用任何框架，纯手写 HTML / CSS / JS，托管在 GitHub Pages 上。</p>
+
+    <h2>技术选择</h2>
+    <p>没有构建工具，没有依赖，每个页面都是一个独立的 <code>.html</code> 文件，共用同一份 <code>style.css</code> 和一小段 <code>theme.js</code> 用来做深色模式切换。这样做的好处是：结构透明，随时可以打开文件直接看懂发生了什么。</p>
+
+    <h2>目录结构</h2>
+    <pre><code>Victorgreatmarshal.github.io/
+├── index.html       # 首页，文章列表
+├── about.html       # 关于页
+├── style.css        # 全站样式
+├── theme.js         # 深色模式切换
+└── posts/
+    ├── hello-world.html
+    └── why-static-site.html</code></pre>
+
+    <h2>如何发布新文章</h2>
+    <p>复制 <code>posts/</code> 下任意一篇文章作为模板，改标题和内容，再到 <code>index.html</code> 的文章列表里加一条链接，push 到 GitHub 就自动发布了。</p>
+
+    <blockquote>没有数据库，没有后台，git push 即部署。</blockquote>
+
+    <a class="back-link" href="../index.html">← 返回首页</a>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    © 2026 Victor · Built with HTML/CSS/JS · Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+  </div>
+</footer>
+
+<script src="../theme.js"></script>
+</body>
+</html>

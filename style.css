@@ -1,0 +1,257 @@
+:root {
+  --bg: #fdfcfa;
+  --fg: #1c1c1c;
+  --muted: #6b6b6b;
+  --accent: #a0522d;
+  --border: #e6e2db;
+  --card-bg: #ffffff;
+  --code-bg: #f2efe9;
+}
+
+:root[data-theme="dark"] {
+  --bg: #16161a;
+  --fg: #e8e6e1;
+  --muted: #9a978f;
+  --accent: #e0a37e;
+  --border: #2c2c30;
+  --card-bg: #1d1d21;
+  --code-bg: #232327;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16161a;
+    --fg: #e8e6e1;
+    --muted: #9a978f;
+    --accent: #e0a37e;
+    --border: #2c2c30;
+    --card-bg: #1d1d21;
+    --code-bg: #232327;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0 20px;
+}
+
+header.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+
+.site-title span {
+  color: var(--accent);
+}
+
+nav.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+nav.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a:hover {
+  color: var(--fg);
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--fg);
+  border-radius: 6px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+#theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+main {
+  padding: 40px 0 60px;
+}
+
+.intro {
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 1.7rem;
+  margin: 0 0 10px;
+}
+
+.intro p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-list li:first-child {
+  padding-top: 0;
+}
+
+.post-list time {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.post-list h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.post-list h2 a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.post-list h2 a:hover {
+  color: var(--accent);
+}
+
+.post-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+.post-list .tags {
+  margin-top: 8px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 6px;
+}
+
+article.post h1 {
+  font-size: 1.9rem;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 30px;
+}
+
+article.post p {
+  margin: 0 0 18px;
+}
+
+article.post h2 {
+  margin: 34px 0 12px;
+  font-size: 1.3rem;
+}
+
+article.post code {
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+article.post pre {
+  background: var(--code-bg);
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+article.post pre code {
+  background: none;
+  padding: 0;
+}
+
+article.post blockquote {
+  margin: 20px 0;
+  padding: 4px 18px;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer.site-footer a {
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .intro h1 { font-size: 1.4rem; }
+  article.post h1 { font-size: 1.5rem; }
+}
