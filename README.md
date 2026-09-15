@@ -1,4 +1,4 @@
-# Victor's Blog
+# Malcolm's Blog
 
 纯 HTML / CSS / JS 手写的静态博客，托管在 GitHub Pages。
 
